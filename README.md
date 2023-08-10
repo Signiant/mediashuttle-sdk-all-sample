@@ -1,10 +1,6 @@
-# Media Shuttle File Browser App
+# Media Shuttle SDK Example App
 
-A sample React web application demonstrating the use of the [Media Shuttle SDK](https://developer.signiant.com/media-shuttle/media-shuttle-sdk.html) for the following features on a given portal for a Media Shuttle account:
-
-- To view the folder structure (files and directories)
-- To upload/download files.
-- To view the progress of uploads/downloads
+A sample React web application demonstrating the use of the [Media Shuttle SDK](https://developer.signiant.com/media-shuttle/media-shuttle-sdk.html) to navigate the folder structure (files and directories) in a given portal, and to upload and download files. It also showcases how to leverage listeners to display progress and to control transfers via SDK.
 
 Build with [create-react-app](https://github.com/facebook/create-react-app).
 
