@@ -16,14 +16,14 @@ npm install
 
 In order to list the files and directories of a portal, follow the following steps:
 
-- Authenticate using [MediaShuttleResourceFactory LoginCredentials](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/classes/MediaShuttleResourceFactory.html).
-- Fetch accounts and select one of them to get the list of the associated portals. See [Accounts](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#listAccounts).
-- Fetch portals and select one of them. See [Portals](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#listPortals).
-- Get the portal member permissions. See [Portal Member Permissions](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getPortalMemberPermissions).
-- Find the root directory with **isUserHome** true from [Portal Member Permissions Response](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/PortalPermissions.html#folders).
-- Get the folder content for the root directory. See [Folder Content](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getFolderContent).
+- Authenticate using [MediaShuttleResourceFactory LoginCredentials](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/classes/MediaShuttleResourceFactory.html).
+- Fetch accounts and select one of them to get the list of the associated portals. See [Accounts](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#listAccounts).
+- Fetch portals and select one of them. See [Portals](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#listPortals).
+- Get the portal member permissions. See [Portal Member Permissions](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getPortalMemberPermissions).
+- Find the root directory with **isUserHome** true from [Portal Member Permissions Response](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/PortalPermissions.html#folders).
+- Get the folder content for the root directory. See [Folder Content](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getFolderContent).
 
-Note: Results from [Folder Content](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getFolderContent) are not recursive, so if the root folder is found based on the portal member permissions, request must be repeated per sub folder. Request for the sub folder should provide `browsePath` instead of `folderId`.
+Note: Results from [Folder Content](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Explorer.html#getFolderContent) are not recursive, so if the root folder is found based on the portal member permissions, request must be repeated per sub folder. Request for the sub folder should provide `browsePath` instead of `folderId`.
 
 ### Uploading files
 
@@ -75,8 +75,8 @@ mediaShuttleResourceFactory.generateDownload(downloadOptions).then((downloader) 
 
 For both upload and download, transfer events can be subscribed. Refer `addSubscriptions` in `src/containers/MediaShuttle/index.js` for subscriptions to different transfer events. 
 
-- [Upload Subscription](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Upload.html#subscribe)
-- [Download Subscription](https://developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Download.html#subscribe)
+- [Upload Subscription](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Upload.html#subscribe)
+- [Download Subscription](https://sdk.developer.signiant.com/sdk-documentation/media-shuttle/latest/interfaces/Download.html#subscribe)
 
 ## Running the Application
 
