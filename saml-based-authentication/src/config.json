@@ -1,8 +1,8 @@
 {
-  "loginIdentifier": "signiant-solutions",
-  "redirectURI": "http://localhost:3000/authCallback",
-  "codeChallenge": "Osc_Dt2a3sVqSPxZYWSxty9dbemxPsOY0n0ko8NWqtw",
-  "codeVerifier": "irigyYTFtyfewiwefu",
+  "loginIdentifier": "",
+  "redirectURI": "http://sample-page.com/authCallback",
+  "codeChallenge": "",
+  "codeVerifier": "",
   "grant_type": "authorization_code",
   "signiantApi": {
     "baseURL": "https://platform-api-service.services.cloud.signiant.com",

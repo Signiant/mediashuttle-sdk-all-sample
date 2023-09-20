@@ -16,12 +16,10 @@ import DoneIcon from "@mui/icons-material/CheckCircle";
 
 import {
   TransferEventType,
-  LoginCredentials,
   MediaShuttleResourceFactory,
   RefreshingCredentials,
 } from "@signiant/media-shuttle-sdk";
 
-import AuthenticationPanel from "components/AuthenticationPanel";
 import AccountPortalPanel from "components/AccountPortalPanel";
 import Table from "components/Table";
 import Topbar from "components/Table/Topbar";
@@ -116,7 +114,7 @@ const MediaShuttle = () => {
 
   const getLoginRedirects = () => {
     setLocalState({ isAuthLoading: true });
-    const apiURL = signiantApi.baseURL + signiantApi.loginRedirects
+    const apiURL = (signiantApi.baseURL + signiantApi.loginRedirects)
     axios
     .get(apiURL, {
         params: {
@@ -152,7 +150,7 @@ const MediaShuttle = () => {
                 method: 'post',
                 url: (domain + "/oauth2/token"),
                 data: qs.stringify({
-                    grant_type : "authorization_code",
+                    grant_type : config.grant_type,
                     client_id : clientId,
                     redirect_uri: config.redirectURI,
                     code: authCodeFromStore,
@@ -209,7 +207,6 @@ const MediaShuttle = () => {
 
   const getAuthorizedAccounts = (token) => {
     setLocalState({ isAuthLoading: true });
-    //const loginCredentials = new LoginCredentials({ username , password});
     const loginCredentials = new RefreshingCredentials({
             refreshToken: token,
             clientId: loginRedirectFromStore.clientId,
