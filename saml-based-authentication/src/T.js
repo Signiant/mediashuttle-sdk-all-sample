@@ -4,8 +4,6 @@ export default class T {
   static FILE_BROWSER_AND_TRANSFER_MANAGER = "File Browser and Transfer Manager";
   static POWERED_BY = "Powered by "
   static MEDIA_SHUTTLE_SDK = "MediaShuttle SDK"
-  static USERNAME = "Username";
-  static PASSWORD = "Password";
   static AUTHENTICATE = "Authenticate";
   static ACCOUNT = "Account";
   static PORTAL = "Portal";
@@ -27,7 +25,6 @@ export default class T {
   static MODIFIED_ON = "Modifield On";
   static PATH = "Path";
   static KB = "KB";
-  static USERNAME_PWD_REQUIRED = "Both Email and Password Required";
   static INVALID_EMAIL = "Invalid Email";
   static CLEAR_LOG = "Clear Log";
   static SUCCESS = "Success";

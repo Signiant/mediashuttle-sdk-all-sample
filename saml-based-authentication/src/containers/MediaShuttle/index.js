@@ -41,8 +41,6 @@ const MediaShuttle = () => {
   const [localState, setLocalState] = useReducer(
     (prevState, newState) => ({ ...prevState, ...newState }),
     {
-      username: "",
-      password: "",
       accounts: [],
       portals: [],
       folders: [],
@@ -70,7 +68,6 @@ const MediaShuttle = () => {
   );
 
   const {
-    username,
     password,
     accounts,
     portals,
@@ -233,21 +230,6 @@ const MediaShuttle = () => {
         setLocalState({ isAuthLoading: false });
       });
   }
-
-  // handle authentication submit
-  const handleSubmit = () => {
-    if (!username || !password) {
-      toast.error(T.USERNAME_PWD_REQUIRED);
-      return;
-    }
-
-    if (!isEmail(username)) {
-      toast.error(T.INVALID_EMAIL);
-      return;
-    }
-
-    getAuthorizedAccounts(null);
-  };
 
   // get portal records
   const getPortals = (value) => {
