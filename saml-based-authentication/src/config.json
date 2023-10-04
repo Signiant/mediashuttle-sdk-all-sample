@@ -1,0 +1,11 @@
+{
+  "loginIdentifier": "",
+  "redirectURI": "http://sample-page.com/authCallback",
+  "codeChallenge": "",
+  "codeVerifier": "",
+  "grant_type": "authorization_code",
+  "signiantApi": {
+    "baseURL": "https://platform-api-service.services.cloud.signiant.com",
+    "loginRedirects": "/v1/authentication/loginRedirects"
+  }
+}
